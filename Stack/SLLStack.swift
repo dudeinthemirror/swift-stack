@@ -69,6 +69,25 @@ class SLLStack<T> {
         }
         return head!.data as? T
     }
+    
+    // Prints the stack
+    func printStack() -> String? {
+        if self.isEmpty() {
+            return nil
+        }
+        var stack = ""
+        
+        stack += "\(head!.data) (head)\n"
+        
+        var node = head
+        
+        while node!.next != nil {
+            node = node!.next
+            stack += "\(node!.data)\n"
+        }
+        print("\(stack)")
+        return stack
+    }
 
     //=============================================================================/
     // MARK: Helpers

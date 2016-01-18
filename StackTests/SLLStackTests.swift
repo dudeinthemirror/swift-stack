@@ -73,6 +73,15 @@ class SLLStackTests: XCTestCase {
         XCTAssertTrue(stck.isEmpty(), "Stack should be empty")
     }
     
+    func testPrintStack () {
+        let stck = SLLStack<String>()
+        stck.push("one")
+        stck.push("two")
+        stck.push("three")
+        stck.push("four")
+        XCTAssertEqual(stck.printStack(), "four (head)\nthree\ntwo\none\n", "Expecting \"four (head)\\nthree\\ntwo\\none\\n\", got \(stck.printStack())")
+     }
+    
 //    func testPerformanceExample() {
 //        self.measureBlock {
 //        }
